@@ -1,73 +1,117 @@
 <!doctype html>
-<html lang="cs">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="./output.css" rel="stylesheet"/>
-  <title>Mobile-First Complete Layout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="source/styles/style.css" rel="stylesheet">
 </head>
-<body class="relative">
-
-  
-  <div class="absolute inset-x-0 top-0 h-[37.6008rem] bg-emerald-300"></div>
-
-  
-  <div class="absolute top-[1.0625rem] left-[1.25rem] w-[20.9375rem] h-[2.375rem] flex items-center justify-between">
-    <div class="flex items-center gap-[10.6875rem]">
-      <img src="2.png" alt="Logo"      class="w-[2.8125rem] h-[1.941rem] object-contain"/>
-      <h1 class="text-white font-['Work_Sans'] font-medium text-[1.875rem] leading-[125%]">
-        Start
-      </h1>
+<body class="">
+<header class="bg-hero p-4 flex justify-between items-center lg:px-34 lg:py-12 md:px-12 md:py-8">
+    <div class="flex items-center space-x-2">
+        <img src="source/images/logo.svg" alt="Logo" class="w-10 h-10">
+        <h1 class="text-white font-worksans text-3xl font-medium">Start</h1>
     </div>
-    <img src="3.png" alt="Menu ikona" class="w-[2.1875rem] h-[2.1875rem] object-contain"/>
-  </div>
-
-  
-  <div class="absolute top-[5.4375rem] left-[1.25rem] w-[20.9375rem] flex flex-col items-start gap-[1.875rem]">
-    <img src="1.png" alt="Hero obrázek" class="w-[20.9375rem] h-[12.288rem] object-cover"/>
-    <div class="flex flex-col items-start gap-[1.5rem]">
-      <div class="text-white font-['Work_Sans'] font-bold text-[1rem] leading-[125%] tracking-[0.3125rem] uppercase">
-        WELCOME
-      </div>
-      <h2 class="text-white font-['Crimson_Text'] font-bold text-[2.5rem] leading-[125%]">
-        Lorem ipsum dolor sit amet consectetur
-      </h2>
-      <p class="text-white/75 font-['Work_Sans'] font-normal text-[0.9375rem] leading-[125%]">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?
-      </p>
-      <button class="w-[10.625rem] h-[3rem] bg-white rounded-[0.3125rem] text-black font-['Work_Sans'] font-normal text-[1rem] leading-[125%]">
-        Explore
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="absolute top-[664px] left-[20px] w-[335px] flex flex-col items-center gap-[55px] bg-white">
-    
-    <div class="w-[121px] h-[20px] bg-[#74C69D] text-black font-['Work_Sans'] font-bold text-[16px] leading-[125%] tracking-[5px] uppercase flex items-center justify-center">
-      PARTNERS
-    </div>
-    
-    <div class="w-[205px] h-[30px] text-black font-['Crimson_Text'] font-bold text-[24px] leading-[125%] text-center">
-      Lorem Ipsum Dolor
-    </div>
-    
-    <div class="w-[335px] h-[85px] text-black/75 font-['Work_Sans'] font-normal text-[20px] leading-[125%] text-center">
-      Lorem ipsum, dolor sit amet consectetur<br/>adipisicing elit.
-    </div>
-    
-    <div class="flex flex-col items-center gap-[40px]">
-      <img src="google.png"    alt="Google logo"     class="w-[150px] h-[49.1351px] object-contain"/>
-      <img src="microsoft.png" alt="Microsoft logo"  class="w-[150px] h-[49.1351px] object-contain"/>
-      <img src="airbnb.png"    alt="Airbnb logo"     class="w-[150px] h-[49.1351px] object-contain"/>
-      <img src="facebook.png"  alt="Facebook logo"   class="w-[150px] h-[49.1351px] object-contain"/>
-      <img src="spotify.png"   alt="Spotify logo"    class="w-[150px] h-[49.1351px] object-contain"/>
-    </div>
-    
-    <button class="w-[170px] h-[48px] bg-[#212529] rounded-[5px] text-white font-['Work_Sans'] font-normal text-[16px] leading-[125%]">
-      Learn More
+    <button class="text-white text-4xl lg:hidden" id="menu-toggle">
+        ☰
     </button>
-  </div>
+    <ul class="hidden lg:flex items-center gap-7">
+        <li><a href="#" class="text-white font-worksans text-xl">Home</a></li>
+        <li><a href="#" class="text-white font-worksans text-xl">About</a></li>
+        <li><a href="#" class="text-white font-worksans text-xl">Services</a></li>
+        <li><a href="#" class="text-white font-worksans text-xl">Contact</a></li>
+    </ul>
+</header>
+<main>
+    <section class="bg-hero px-6 py-8 text-white lg:flex lg:justify-between lg:items-center lg:px-34 lg:py-12 lg:flex-row-reverse lg:gap-30 md:items-center md:flex md:flex-col">
+        <img src="./source/images/groupka.svg" alt="groupka" class="mb-6 rounded-md mx-auto lg:mb-0 lg:w-2/3">
+        <div class="md:w-2/3">
+            <p class="uppercase font-bold font-worksans text-sm tracking-widest mb-2">Welcome</p>
+            <h1 class="text-xl font-crimson font-bold mb-3 lg:text-5xl">Lorem ipsum dolor sit amet consectetur</h1>
+            <p class="text-sm mb-4 font-worksans">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit maxime hic quia, ab dolor aspernatur nobis cum est esse error solum.
+            </p>
+            <button class="bg-white text-black font-medium px-12 py-2 rounded shadow hover:bg-gray-200 transition duration-300 hover:cursor-pointer font-worksans text-xl">
+                Explore
+            </button>
+        </div>
+    </section>
+    <section class="text-center px-6 py-8">
+        <p class="text-hero font-worksans uppercase font-bold tracking-widest mb-1">Partners</p>
+        <h2 class="text-2xl font-crimson font-bold mb-2 lg:text-5xl">Lorem Ipsum Dolor</h2>
+        <p class="text-xl text-black-400 font-worksans mb-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <div class="flex flex-col items-center justify-center gap-10 my-14 lg:flex-row lg:flex-wrap">
+            <img src="./source/images/partner1.svg" alt="1" class="w-auto h-10 m-0">
+            <img src="./source/images/partner2.svg" alt="2" class="w-auto h-10 m-0">
+            <img src="./source/images/partner3.svg" alt="3" class="w-auto h-10 m-0">
+            <img src="./source/images/partner4.svg" alt="4" class="w-auto h-10 m-0">
+            <img src="./source/images/partner5.svg" alt="5" class="w-auto h-10 m-0">
+        </div>
+        <button class="btn">
+            Learn More
+        </button>
+    </section>
+    <section class="flex flex-col items-center px-6 py-8 lg:flex lg:justify-between lg:items-center lg:px-34 lg:py-12 lg:flex-row lg:gap-30 md:items-center md:flex md:flex-col">
+        <img src="./source/images/group.svg" alt="group1" class="mb-6 rounded-md mx-0 lg:mb-0 lg:w-2/3">
+        <div class="md:w-2/3">
+        <h3 class="font-crimson font-bold mb-5 text-2xl text-left mx-0 w-full sm:max-w-xl lg:text-5xl">Lorem ipsum dolor sit amet consectetur</h3>
+        <p class="font-worksans mb-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
+        <button class="btn self-start">
+            Learn More
+        </button>
+        </div>
+    </section>
+
+    <section class="flex flex-col items-center px-6 py-8 lg:flex lg:justify-between lg:items-center lg:px-34 lg:py-12 lg:flex-row-reverse lg:gap-30 md:items-center md:flex md:flex-col">
+        <img src="./source/images/group2.svg" alt="group2" class="mb-6 rounded-md mx-0 lg:mb-0 lg:w-2/3">
+        <div class="md:w-2/3">
+        <h3 class="font-crimson font-bold mb-5 text-2xl text-left w-full sm:max-w-xl mx-0 lg:text-5xl">Lorem ipsum dolor sit amet consectetur</h3>
+        <p class="font-worksans mb-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
+        <button class="btn self-start">Learn More</button>
+        </div>
+    </section>
+        <section class="text-center px-6 py-9">
+            <p class="text-hero font-worksans uppercase font-bold tracking-widest mb-1">Team</p>
+            <h2 class="text-2xl font-crimson font-bold mb-2 lg:text-5xl">Our Talents</h2>
+            <p class="text-xl text-black-400 font-worksans mb-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <div class="flex flex-col items-center justify-center gap-9 mb-11 lg:flex-row md:flex-wrap">
+                <div class="card flex flex-col px-12 py-8 gap-4">
+                    <img src="./source/images/profile1.svg" alt="profile" class="w-auto h-44 m-0">
+                    <h4 class="font-crimson font-bold text-2xl text-left">Peg Legge</h4>
+                    <p class="uppercase text-sm font-worksans text-left">CEO</p>
+                </div>
+                <div class="card flex flex-col px-12 py-8 gap-4">
+                    <img src="./source/images/profile2.svg" alt="profile" class="w-auto h-44 m-0">
+                    <h4 class="font-crimson font-bold text-2xl text-left">Richard Guerra</h4>
+                    <p class="text-sm uppercase font-worksans text-left">CTO</p>
+                </div>
+                <div class="card flex flex-col px-12 py-8 gap-4">
+                    <img src="./source/images/profile3.svg" alt="profile" class="w-auto h-44 m-0">
+                    <h4 class="font-crimson font-bold text-2xl text-left">Alexandra Stolz</h4>
+                    <p class="uppercase text-sm font-worksans text-left">Designer</p>
+                </div>
+                <div class="card flex flex-col px-12 py-8 gap-4">
+                    <img src="./source/images/profile4.svg" alt="profile" class="w-auto h-44 m-0">
+                    <h4 class="font-crimson font-bold text-2xl text-left">Janet Bray</h4>
+                    <p class="uppercase text-sm font-worksans text-left">Developer</p>
+                </div>
+            </div>
+            <button class="btn">
+                Learn More
+            </button>
+        </section>
+    <footer class="bg-hero text-white text-center py-8 px-6 lg:px-34 lg:py-12 lg:flex lg:justify-between lg:items-center">
+        <div class="flex flex-row gap-5 justify-center lg:justify-start mb-5 lg:mb-0">
+            <img src="source/images/fb.svg" alt="Logo" class="w-auto h-4">
+            <img src="source/images/ig.svg" alt="Logo" class="w-auto h-4">
+            <img src="source/images/twitter.svg" alt="Logo" class="w-auto h-4">
+            <img src="source/images/pinterest.svg" alt="Logo" class="w-auto h-4">
+            <img src="source/images/tt.svg" alt="Logo" class="w-auto h-4">
+                <img src="source/images/yt.svg" alt="Logo" class="w-auto h-4">
+            <img src="source/images/whatsapp.svg" alt="Logo" class="w-auto h-4">
+        </div>
+    </footer>
+</main>
+
 
 </body>
 </html>

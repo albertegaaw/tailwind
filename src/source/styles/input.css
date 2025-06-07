@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer components {
+.btn {
+    @apply bg-secondary text-white text-xl py-2 px-6 font-worksans rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer;
+}
+
+.card {
+    @apply bg-white shadow-2xl rounded-lg
+}
+}
+
+@theme {
+    /* Colors Pallete */
+    --color-hero: #74C69D;
+    --color-secondary: #212529;
+
+    /* Text size family */
+
+    /* Font family */
+    --font-worksans: WorkSans, sans-serif;
+    --font-crimson: CrimsonPro, serif;
+}
